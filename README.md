@@ -25,7 +25,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/product-crud.git
+   git clone https://github.com/AldairPardo/product-crud.git
    cd product-crud
    ```
 
