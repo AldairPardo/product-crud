@@ -42,11 +42,12 @@ Ejecuta el siguiente comando para instalar las dependencias del proyecto:
 Crea un archivo `.env` en la raíz del proyecto con la siguiente configuración:
 
 ```env
-DATABASE_HOST=localhost
-DATABASE_PORT=XXXX
-DATABASE_USERNAME=usuario
-DATABASE_PASSWORD=contraseña
-DATABASE_NAME=producto_db
+DB_HOST=localhost;
+DB_PORT=5432;
+DB_USER=postgres;
+DB_PASSWORD=XXXXXX;
+DB_NAME=inventory;
+JWT_SECRET=XXXXXX
 ```
 
 Si estás utilizando Docker, puedes modificar estas variables según tu configuración.
