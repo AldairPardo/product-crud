@@ -23,8 +23,8 @@ export class ProductRepository {
     return entity.toModel();
   }
   
-  async findAll(): Promise<Product[]> {
-    const entities = await this.repository.find();
+  async findAll(limit: number, page: number): Promise<Product[]> {
+    const entities = await this.repository.find({ skip: (page*limit) - limit, take: limit });
     return entities.map(entity => entity.toModel());
   }
 

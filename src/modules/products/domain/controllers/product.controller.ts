@@ -6,6 +6,7 @@ import {
   Param,
   Delete,
   Put,
+  Query,
 } from '@nestjs/common';
 import { ProductManager } from '../managers/product.manager';
 import { ProductDto, CreateProductDto } from '../dtos/product.dto';
@@ -40,8 +41,11 @@ export class ProductController {
     description: 'Listado de productos.',
     type: [ProductDto],
   })
-  async findAll() {
-    const products = await this.manager.findAll();
+  async findAll(
+    @Query('limit') limit: number,
+    @Query('page') page: number
+  ) {
+    const products = await this.manager.findAll(limit, page);
     return { products };
   }
 

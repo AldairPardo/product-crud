@@ -15,8 +15,8 @@ export class ProductManager {
     return await this.repository.save(product);
   }
 
-  async findAll(): Promise<Product[]> {
-    return await this.repository.findAll();
+  async findAll(limit: number = 5, page: number = 1): Promise<Product[]> {
+    return await this.repository.findAll(limit, page);
   }
 
   async findOne(id: number): Promise<Product> {
